@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Subtle dotted grid pattern overlay for a premium look */
+.pattern-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.25) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.15;
+}
+
+/* Edge gradient mask to soften horizontal scroll edges */
+.edge-mask-left {
+  background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0));
+}
+.edge-mask-right {
+  background: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0));
+}
+
+/* Theming variables */
+.theme-dark {
+  /* Tema hitam/putih (gelap) */
+  --bg-card: #000000;
+  --bg-elev: #000000;
+  --text-primary: #ffffff;
+  --text-muted: #ffffff;
+  --foreground: #ffffff;
+  --ring-muted: #ffffff;
+  --chip-bg: #000000;
+  --chip-active-bg: #ffffff;
+  --chip-active-text: #000000;
+}
+
+.theme-light {
+  /* Tema hitam/putih (terang) */
+  --bg-card: #ffffff;
+  --bg-elev: #ffffff;
+  --text-primary: #000000;
+  --text-muted: #000000;
+  --foreground: #000000;
+  --ring-muted: #000000;
+  --chip-bg: #ffffff;
+  --chip-active-bg: #000000;
+  --chip-active-text: #ffffff;
+}
+
+/* Utility classes using variables */
+.card {
+  background: var(--bg-elev);
+  color: var(--text-primary);
+}
+.ring-muted {
+  border: 1px solid var(--ring-muted);
+}
+.text-soft {
+  color: var(--text-muted);
+}
+.chip {
+  background: var(--chip-bg);
+  color: var(--text-primary);
+}
+.chip-active {
+  background: var(--chip-active-bg);
+  color: var(--chip-active-text);
+}
