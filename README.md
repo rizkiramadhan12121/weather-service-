@@ -86,6 +86,9 @@ Query Params:
 
 Contoh:
 
+
+kyxz
+
 ```bash
 curl "http://localhost:3000/api/disasters?country=Indonesia&types=flood,landslide"
 ```
